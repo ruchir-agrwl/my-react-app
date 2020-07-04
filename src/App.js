@@ -7,7 +7,7 @@ import Human from './Person/Human'
 class App extends Component {
   state ={
     persons: [
-      {name: 'Manu', age: 28},
+      {name: 'Manjeet', age: 28},
       {name: 'Max', age: 25}
     ]
   }
@@ -18,6 +18,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <br></br>
+        <button>Switch Name</button>
         <Person name = {this.state.persons[0].name} age = {this.state.persons[0].age} />
         <Person name = {this.state.persons[1].name} age = {this.state.persons[1].age}/>
         <Human nationality = 'African'/>
