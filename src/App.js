@@ -12,8 +12,16 @@ class App extends Component {
     ]
   }
 
+  //Changing the state on button click
+  //setState is the method provided to us by Component class
+  //This method with merge the state provided to it with the existing state.
   buttonClickHandler = () =>{
-    console.log('Button Clicked !!')
+    this.setState({
+      persons: [
+        {name: 'Rajesh', age:31},
+        {name: 'Priya', age: 27}
+      ]
+    })
   }
 
 
