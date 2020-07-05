@@ -33,6 +33,12 @@ const app = (props) => {
     })
   }
 
+  const style = {
+    backgroundColor: 'white',
+    border: '1px solid blue',
+    padding: '8px'
+  }
+
   return (
       <div className="App">
         <header className="App-header">
@@ -40,7 +46,11 @@ const app = (props) => {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br></br>
-        <button onClick = {() => buttonClickHandler('Howard !!')}>Switch Name</button>
+        <button
+        style = {style} 
+        onClick = {() => buttonClickHandler('Howard !!')}>
+          Switch Name
+        </button>
         <Person 
         name = {personState.persons[0].name} 
         age = {personState.persons[0].age} 
