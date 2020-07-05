@@ -23,7 +23,15 @@ const app = (props) => {
       ]
     })
   }
-console.log(personState)
+
+  const nameChangedHandler = (event) => {
+    setPersonState({
+      persons: [
+        {name: event.target.value, age:31},
+        {name: 'Priya', age: 27}
+      ]
+    })
+  }
 
   return (
       <div className="App">
@@ -33,8 +41,14 @@ console.log(personState)
         </header>
         <br></br>
         <button onClick = {() => buttonClickHandler('Howard !!')}>Switch Name</button>
-        <Person name = {personState.persons[0].name} age = {personState.persons[0].age} />
-        <Person name = {personState.persons[1].name} age = {personState.persons[1].age} click = {buttonClickHandler.bind(this,'Sheldon !!!')}/>
+        <Person 
+        name = {personState.persons[0].name} 
+        age = {personState.persons[0].age} 
+        changed = {nameChangedHandler}  />
+        <Person 
+        name = {personState.persons[1].name} 
+        age = {personState.persons[1].age} 
+        click = {buttonClickHandler.bind(this,'Sheldon !!!')}/>
         <Human nationality = 'African'/>
       </div>
     );
