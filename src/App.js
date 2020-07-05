@@ -34,7 +34,7 @@ console.log(personState)
         <br></br>
         <button onClick = {buttonClickHandler}>Switch Name</button>
         <Person name = {personState.persons[0].name} age = {personState.persons[0].age} />
-        <Person name = {personState.persons[1].name} age = {personState.persons[1].age}/>
+        <Person name = {personState.persons[1].name} age = {personState.persons[1].age} click = {buttonClickHandler}/>
         <Human nationality = 'African'/>
       </div>
     );
