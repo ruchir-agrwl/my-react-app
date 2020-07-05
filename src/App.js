@@ -15,10 +15,10 @@ const app = (props) => {
   })
 
   //Changing the state on button click
-  const buttonClickHandler = () =>{
+  const buttonClickHandler = (newName) =>{
     setPersonState({
       persons: [
-        {name: 'Rajesh', age:31},
+        {name: newName, age:31},
         {name: 'Priya', age: 27}
       ]
     })
@@ -32,9 +32,9 @@ console.log(personState)
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br></br>
-        <button onClick = {buttonClickHandler}>Switch Name</button>
+        <button onClick = {() => buttonClickHandler('Howard !!')}>Switch Name</button>
         <Person name = {personState.persons[0].name} age = {personState.persons[0].age} />
-        <Person name = {personState.persons[1].name} age = {personState.persons[1].age} click = {buttonClickHandler}/>
+        <Person name = {personState.persons[1].name} age = {personState.persons[1].age} click = {buttonClickHandler.bind(this,'Sheldon !!!')}/>
         <Human nationality = 'African'/>
       </div>
     );
